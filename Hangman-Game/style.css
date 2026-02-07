@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+/* Mise en page globale */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background: #fff9e2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Conteneurs de publicités */
+.ad-container {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 728px;
+    background: rgba(0,0,0,0.03); /* Zone grise légère pour pré-visualiser */
+    min-height: 90px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin: 1rem 0;
+    color: #ff7660;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* On s'assure que la terre ne cache pas les éléments importants */
+.hole:after {
+    display: block;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/dirt.svg") bottom center no-repeat;
+    background-size: contain;
+    content: "";
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1159990/mole.svg") bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+#start {
+    font-family: inherit;
+    background: #3b1010;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    border: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 620px) {
+    .game {
+        width: 350px;
+        height: 250px;
+    }
+}
