@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Floppy Bird - Play Online</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        /* Layout Structure */
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            overflow: hidden; background-color: #000;
+            display: flex; flex-direction: column;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        #main-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        /* Zones de publicités */
+        .ad-container {
+            height: 55px; /* Taille idéale pour mobile (320x50) */
+            width: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+
+        /* Zone de Jeu */
+        #gamecontainer {
+            flex: 1; /* Prend tout l'espace central */
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #4ec0ca; /* Couleur ciel Flappy */
+        }
+
+        /* Ajustement du footer original */
+        #footer {
+            position: relative;
+            background: rgba(0,0,0,0.5);
+            padding: 5px;
+            font-size: 10px;
+            z-index: 10;
+        }
+
+        /* Pour éviter que le jeu ne soit décalé sur certains navigateurs */
+        #gamescreen {
+            position: relative !important;
+            margin: 0 auto !important;
+            top: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-wrapper">
+
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="1111111111"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="gamecontainer">
+        <div id="gamescreen">
+            <div id="sky" class="animated">
+                <div id="flyarea">
+                    <div id="ceiling" class="animated"></div>
+                    <div id="player" class="bird animated"></div>
+                    <div id="bigscore"></div>
+                    <div id="splash"></div>
+                    <div id="scoreboard">
+                        <div id="medal"></div>
+                        <div id="currentscore"></div>
+                        <div id="highscore"></div>
+                        <div id="replay"><img src="assets/replay.png" alt="replay"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="land" class="animated"><div id="debug"></div></div>
+        </div>
+    </div>
+
+    <div class="ad-container">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="2222222222"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<div class="boundingbox" id="playerbox"></div>
+<div class="boundingbox" id="pipebox"></div>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+<script src="js/buzz.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

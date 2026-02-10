@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Super Mario Bros - Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        body, html {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            overflow: hidden; background-color: #5C94FC; /* Bleu ciel Mario */
+            display: flex; flex-direction: column;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #main-container {
+            display: flex; flex-direction: column;
+            height: 100vh; width: 100vw;
+        }
+
+        /* Zones Publicitaires */
+        .ad-zone {
+            height: 50px; width: 100%;
+            background-color: rgba(0,0,0,0.2);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 10;
+        }
+
+        /* Zone de Jeu */
+        #game-wrapper {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Le canvas du jeu */
+        canvas {
+            max-width: 100%;
+            max-height: 80%; /* Laisse de la place pour les infos et le bouton */
+            object-fit: contain;
+            image-rendering: pixelated;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        /* Interface utilisateur (Bouton et Infos) */
+        .ui-container {
+            text-align: center;
+            color: white;
+            padding: 10px;
+            z-index: 20;
+        }
+
+        .btn-restart {
+            background-color: #E74C3C;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px #C0392B;
+            transition: all 0.1s;
+        }
+
+        .btn-restart:active {
+            box-shadow: 0 0 #C0392B;
+            transform: translateY(4px);
+        }
+
+        .info p { margin: 5px 0; font-size: 14px; text-shadow: 1px 1px #000; }
+    </style>
+</head>
+<body>
+
+<div id="main-container">
+    <div class="ad-zone">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="1111111111"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="game-wrapper">
+        <div class="ui-container">
+            <button class="btn-restart" onclick="location.reload();">Redémarrer le Jeu</button>
+            <div class="info">
+                <p>Move: Arrow Keys | Jump: X | Run: Z</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ad-zone">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+             data-ad-slot="2222222222"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/input.js"></script>
+<script type="text/javascript" src="js/resources.js"></script>
+<script type="text/javascript" src="js/sprite.js"></script>
+<script type="text/javascript" src="js/entity.js"></script>
+<script type="text/javascript" src="js/pipe.js"></script>
+<script type="text/javascript" src="js/mushroom.js"></script>
+<script type="text/javascript" src="js/fireflower.js"></script>
+<script type="text/javascript" src="js/star.js"></script>
+<script type="text/javascript" src="js/fireball.js"></script>
+<script type="text/javascript" src="js/coin.js"></script>
+<script type="text/javascript" src="js/bcoin.js"></script>
+<script type="text/javascript" src="js/goomba.js"></script>
+<script type="text/javascript" src="js/koopa.js"></script>
+<script type="text/javascript" src="js/floor.js"></script>
+<script type="text/javascript" src="js/block.js"></script>
+<script type="text/javascript" src="js/rubble.js"></script>
+<script type="text/javascript" src="js/prop.js"></script>
+<script type="text/javascript" src="js/player.js"></script>
+<script type="text/javascript" src="js/flag.js"></script>
+<script type="text/javascript" src="js/levels/level.js"></script>
+<script type="text/javascript" src="js/levels/11.js"></script>
+<script type="text/javascript" src="js/levels/11tunnel.js"></script>
+<script type="text/javascript" src="js/game.js"></script>
+
+</body>
+</html>

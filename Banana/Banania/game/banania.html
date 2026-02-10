@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Banania - Game Edition</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-REMPLACER_ICI" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        html, body {
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            overflow: hidden; background-color: #000;
+            display: flex; flex-direction: column;
+        }
+
+        #main-layout {
+            display: flex; flex-direction: column;
+            height: 100vh; width: 100vw;
+        }
+
+        /* Zone pour les bannières (50px de haut) */
+        .ad-zone {
+            height: 50px; width: 100%;
+            background-color: #000;
+            display: flex; justify-content: center; align-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid #222;
+        }
+
+        /* La zone de jeu s'adapte automatiquement */
+        #game-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111;
+            position: relative;
+        }
+
+        /* Force le canvas de ton jeu à être grand et centré */
+        canvas.canv {
+            max-width: 100% !important;
+            max-height: 100% !important;
+            object-fit: contain !important;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+
+<div id="main-layout">
+    <div class="ad-zone">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-REMPLACER_ICI"
+             data-ad-slot="ID_SLOT_1"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div id="game-container">
+    </div>
+
+    <div class="ad-zone" style="border-top: 1px solid #222; border-bottom: none;">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:320px;height:50px"
+             data-ad-client="ca-pub-REMPLACER_ICI"
+             data-ad-slot="ID_SLOT_2"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<script src="md5/md5.js"></script>
+<script src="level/level.js"></script>
+<script src="game.js"></script>
+
+<script type="text/javascript">
+    // CORRECTIF CRUCIAL POUR TON CODE
+    window.addEventListener('load', function() {
+        // 1. On trouve le canvas créé par game.js
+        var canvas = document.querySelector('canvas.canv');
+        var container = document.getElementById('game-container');
+
+        if (canvas && container) {
+            // 2. On le déplace dans le conteneur entre les pubs
+            container.appendChild(canvas);
+        }
+
+        // 3. On bloque la fonction de redimensionnement de game.js
+        // qui essaie de forcer le plein écran (ce qui cache les pubs)
+        window.onresize = null;
+    });
+</script>
+
+</body>
+</html>
