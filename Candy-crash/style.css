@@ -1,0 +1,133 @@
+/* --- Structure Globale --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://raw.githubusercontent.com/arpit456jain/Amazing-Js-Projects/master/Candy%20Crush/utils/bg.png');
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Largeur max pour le portail */
+}
+
+/* --- Zones Publicitaires (Les emplacements pour l'argent) --- */
+.ad-slot {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+#ad-top {
+    width: 728px;
+    height: 90px; /* Taille standard leaderboard */
+    margin: 20px 0;
+}
+
+.main-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.side-ad {
+    width: 160px;
+    height: 600px; /* Taille standard SkyScraper */
+}
+
+/* --- Zone du Jeu --- */
+.game-area {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 560px;
+    width: 560px;
+    background-color: rgba(109, 127, 151, 0.5);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.grid div {
+    height: 70px;
+    width: 70px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.grid div:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* --- Scoreboard & Menu --- */
+.scoreBoard {
+    display: none; /* Géré par JS */
+    background-color: #00ffff;
+    border-radius: 15px;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 0 #008b8b;
+}
+
+.stat-item span { font-size: 14px; font-weight: bold; }
+#score { font-size: 32px; color: #333; margin: 0; }
+
+/* --- Écran de Sélection --- */
+#modeSelection {
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s, background-color 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#endlessMode { background-color: #4caf50; color: white; margin-bottom: 10px; }
+#timedMode { background-color: #2196f3; color: white; }
+#changeMode { background-color: #ff5722; color: white; font-size: 14px; padding: 10px 20px; }
+
+button:hover { transform: scale(1.1); }

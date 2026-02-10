@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Pong Pro - Monétisé</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="icon" href="https://i.ibb.co/M6KTWnf/pic.jpg" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <script>
+        window.adsbygoogle = window.adsbygoogle || [];
+        const adBreak = adConfig = function(o) {adsbygoogle.push(o);}
+    </script>
+</head>
+<body>
+
+<div class="page-wrapper">
+    <div class="ad-top">Publicité 728x90</div>
+
+    <div class="main-layout">
+        <div class="ad-side">Ad</div>
+
+        <div class="game-area">
+            <h1>Ping Pong Pro</h1>
+            <div class="container">
+                <canvas id="canvas" width="600" height="400"></canvas>
+            </div>
+
+            <div class="button-group">
+                <button id="start-btn" class="btn-game">Démarrer</button>
+                <button id="pause-btn" class="btn-game btn-pause">Pause</button>
+                <button id="restart-btn" class="btn-game btn-restart">Restart</button>
+            </div>
+            <p class="control">Joueur Gauche (W/S) | Joueur Droite (↑/↓)</p>
+        </div>
+
+        <div class="ad-side">Ad</div>
+    </div>
+</div>
+
+<div class="modal fade" id="message-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <h2 id="message"></h2>
+                <button type="button" id="message-modal-close" class="btn btn-primary mt-3">Rejouer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background-attachment: fixed; /* Le fond ne bouge pas quand on scrolle */
+    color: white;
+}
+
+.ad-top {
+    width: 728px;
+    height: 90px;
+    background: #ddd;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #999;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+}
+
+.ad-side {
+    width: 160px;
+    height: 600px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #999;
+}
+
+#board {
+    width: 400px;
+    height: 400px;
+    background-color: lightgray;
+    border: 10px solid #777;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#board div {
+    width: 48px;
+    height: 48px;
+    border: 1px solid whitesmoke;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tile-clicked { background-color: #bbb; cursor: default !important; }
+
+/* Couleurs des nombres */
+.x1 { color: blue; } .x2 { color: green; } .x3 { color: red; }
+.x4 { color: navy; } .x5 { color: brown; }
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#flag-button, #reset-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #777;
+}

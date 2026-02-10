@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Candy Crush - Portail Jeux</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="game-container">
+    <div id="ad-top" class="ad-slot">Publicité</div>
+
+    <div class="main-layout">
+        <div id="ad-left" class="ad-slot side-ad">Publicité</div>
+
+        <div class="game-area">
+            <div id="modeSelection">
+                <h2>Candy Crush</h2>
+                <button id="endlessMode">Mode Infini</button>
+                <button id="timedMode">Mode Chrono (2 min)</button>
+            </div>
+
+            <div class="scoreBoard" style="display: none;">
+                <div class="stat-item">
+                    <span>Score:</span>
+                    <h1 id="score">0</h1>
+                </div>
+                <div id="timer" class="stat-item"></div>
+                <button id="changeMode">Menu</button>
+            </div>
+
+            <div class="grid" style="display: none;"></div>
+        </div>
+
+        <div id="ad-right" class="ad-slot side-ad">Publicité</div>
+    </div>
+</div>
+
+</body>
+</html>
